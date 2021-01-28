@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTER</title>
+    <link  rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/82f9263a9b.js"></script>
+   <script src= 
+    "https://code.jquery.com/jquery-3.5.1.js"> </script>
+</head>
+<body>
+    <div id="container-right">
+        <div id="audio-img">
+            <img class="cover">
+        </div>
+        <div id="audio-player">
+            <div id="audio-info">
+        <span class="artist"></span> - <span class="title"></span>
+            </div>
+           <input id="volume" type="range" min="0" max = "10" value="5">
+           <br>
+           <div id="audio-buttons">
+               <button id="prev"></button>
+               <button id="play"></button>
+               <button id="pause">
+               </button>
+               <button id="stop"></button>
+               <button id="next"></button>
+           </div> 
+           <div class="clearfix"></div>
+           <div id="tracker">
+               <div id="progressbar">
+                   <span id="progress">
+               </span>
+               </div>
+               <span id="duration"></span>
+           </div>
+           <div class="clearfix">
+           </div>
+        </div>
+    </div>
+    <div class="playlist-section">
+        <ul id="playlist">
+
+        </ul>
+    </div>
+    <div id="master"></div>
+    
+</body>
+
+<script> 
+    $(document).ready(function () { 
+
+        // FETCHING DATA FROM JSON FILE 
+        $.getJSON("music.json",  
+                function (data) { 
+            var student = ''; 
+
+            // ITERATING THROUGH OBJECTS 
+            $.each(data, function (key, value) { 
+
+                //CONSTRUCTION OF ROWS HAVING 
+                // DATA FROM JSON OBJECT 
+                student += '<ul>'; 
+                student += '<li song = "kuttystory.mp3" cover="master.jpeg"><a class="clickevent">' +  
+                    value.url + '</a></li>'; 
+
+                student += '<li song="andhakannapathaka.mp3" cover="master.jpeg"><span>' +  
+                    value.musicdirector + '</li></span>'; 
+
+                student += '<li song="mastercoming.mp3" cover="master.jpeg"><span>' +  
+                    value.name + '</li></span>'; 
+
+                student += '<li song="quitpanuda.mp3" cover="master.jpeg"><span>' +  
+                    value.singer + '</li></span>'; 
+
+                student += '</ul>'; 
+            }); 
+              
+            //INSERTING ROWS INTO TABLE  
+            $('#playlist').append(student); 
+        }); 
+    }); 
+    
+</script>
+<script src="main.js"></script>
+   
+</html>

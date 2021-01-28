@@ -1,0 +1,30 @@
+ [
+    {
+        "url" : "vaathicoming.mp3",
+        "name" : "Vaathi coming",
+        "musicdirector" : "Anirudh",
+        "singer": "Anirudh",
+        "path" : "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3"
+         
+    },
+    {
+        "url" : "kuttystory.mp3",
+        "name" : "kutty story",
+        "musicdirector" : "Anirudh",
+        "singer" : "Vijay"
+    },
+    {
+        "url" : "Quit Panuda.mp3",
+        "name" : "Quit Panuda",
+        "musicdirector" : "Anirudh",
+        "singer" : "Anirudh"
+    },
+    {
+        "url" : "vaathiraid.mp3",
+        "name" : "Vaathi Raid",
+        "musicdirector" : "Anirudh",
+        "singer" : "Anirudh"
+    }
+
+
+]
